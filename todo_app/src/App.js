@@ -7,15 +7,15 @@ import firebase from 'firebase';
 
 function App() {
   const [todos, setTodos] = useState([]);   
-  const [input, setInput] = useState('');    
+  const [input, setInput] = useState('');   
+
   useEffect(() => {
-    // this code fires whwn thw app.js loads
+    // this code fires when thw app.js loads
     db.collection('todos').orderBy('timestamp','desc').onSnapshot(snapshot =>{
       setTodos(snapshot.docs.map(doc => ({id: doc.id , todo: doc.data().todo})))
     })
 
   }, []);   
- 
 
   const addTodo = (event) =>{
     event.preventDefault();   
