@@ -6,10 +6,6 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 import { makeStyles } from '@material-ui/core/styles'
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
     paper: {
       position: 'absolute',
